@@ -1,0 +1,5 @@
+package com.jonkelvin.cursomc.resources.exceptions;
+
+public class StandardError {
+
+}

@@ -1,0 +1,5 @@
+package com.jonkelvin.cursomc.services.exceptions;
+
+public class ObjectNotFoundException {
+
+}
