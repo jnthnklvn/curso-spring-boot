@@ -1,7 +1,0 @@
-package com.jonkelvin.cursomc.domain;
-
-public class Pagamento {
-	
-	private Integer id;
-	private EstadoPagamento estado;
-}
