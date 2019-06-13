@@ -8053,3 +8053,63 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:45.494
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JqKezRrN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:45.501
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.JqKezRrN
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:45.505
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:45.511
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.JqKezRrN => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.492
+!MESSAGE Boot LS startup time from start to initialized: 4768ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.554
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.AaykWzBe
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.562
+!MESSAGE subscribing to classpath changes: sts4.classpath.AaykWzBe
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.572
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.583
+!MESSAGE subsribers = [sts4.classpath.AaykWzBe]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.587
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.591
+!MESSAGE project cursomc ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.595
+!MESSAGE Preparing classpath changed notification cursomc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.599
+!MESSAGE project AulaJPA ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.603
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.606
+!MESSAGE project AulaJPA SKIPPED
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.611
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.616
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.AaykWzBe => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.642
+!MESSAGE classpath=101 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.646
+!MESSAGE executing callback sts4.classpath.AaykWzBe cursomc false 101
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-13 03:40:55.677
+!MESSAGE executing callback sts4.classpath.AaykWzBe SUCCESS [done]
