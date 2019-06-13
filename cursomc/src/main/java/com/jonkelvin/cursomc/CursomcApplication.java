@@ -13,6 +13,7 @@ import com.jonkelvin.cursomc.domain.Cidade;
 import com.jonkelvin.cursomc.domain.Cliente;
 import com.jonkelvin.cursomc.domain.Endereco;
 import com.jonkelvin.cursomc.domain.Estado;
+import com.jonkelvin.cursomc.domain.ItemPedido;
 import com.jonkelvin.cursomc.domain.Pagamento;
 import com.jonkelvin.cursomc.domain.PagamentoComBoleto;
 import com.jonkelvin.cursomc.domain.PagamentoComCartao;
@@ -25,6 +26,7 @@ import com.jonkelvin.cursomc.repositories.CidadeRepository;
 import com.jonkelvin.cursomc.repositories.ClienteRepository;
 import com.jonkelvin.cursomc.repositories.EnderecoRepository;
 import com.jonkelvin.cursomc.repositories.EstadoRepository;
+import com.jonkelvin.cursomc.repositories.ItemPedidoRepository;
 import com.jonkelvin.cursomc.repositories.PagamentoRepository;
 import com.jonkelvin.cursomc.repositories.PedidoRepository;
 import com.jonkelvin.cursomc.repositories.ProdutoRepository;
@@ -48,6 +50,8 @@ public class CursomcApplication implements CommandLineRunner {
 	private PagamentoRepository pagamentoRepository;
 	@Autowired
 	private PedidoRepository pedidoRepository;
+	@Autowired
+	private ItemPedidoRepository itemPedidoRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CursomcApplication.class, args);
@@ -59,9 +63,9 @@ public class CursomcApplication implements CommandLineRunner {
 		Categoria cat1 = new Categoria(null, "Informática");
 		Categoria cat2 = new Categoria(null, "Escritorio");
 		
-		Produto p1 = new Produto(null, "Computador", 2000);
-		Produto p2 = new Produto(null, "Impressora", 800);
-		Produto p3 = new Produto(null, "Mouse", 80);
+		Produto p1 = new Produto(null, "Computador", 2000.0);
+		Produto p2 = new Produto(null, "Impressora", 800.0);
+		Produto p3 = new Produto(null, "Mouse", 80.0);
 		
 		cat1.getProdutos().addAll(Arrays.asList(p1, p2, p3));
 		cat2.getProdutos().addAll(Arrays.asList(p2));
@@ -113,5 +117,18 @@ public class CursomcApplication implements CommandLineRunner {
 
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto1, pagto2));
+
+		ItemPedido ip1 = new ItemPedido(p1, ped1, 0.0, 1, p1.getPreco());
+		ItemPedido ip2 = new ItemPedido(p3, ped1, 0.0, 2, p3.getPreco());
+		ItemPedido ip3 = new ItemPedido(p2, ped2, 100.0, 1, p2.getPreco());
+
+		ped1.getItens().addAll(Arrays.asList(ip1, ip2));
+		ped2.getItens().addAll(Arrays.asList(ip3));
+
+		p1.getItens().addAll(Arrays.asList(ip1));
+		p2.getItens().addAll(Arrays.asList(ip3));
+		p3.getItens().addAll(Arrays.asList(ip2));
+		
+		itemPedidoRepository.saveAll(Arrays.asList(ip1, ip2, ip3));
 	}
 }
