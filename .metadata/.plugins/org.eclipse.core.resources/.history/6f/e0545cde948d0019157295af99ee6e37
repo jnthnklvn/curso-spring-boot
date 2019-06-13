@@ -1,0 +1,20 @@
+package com.jonkelvin.cursomc.domain;
+
+import java.util.Date;
+
+import com.jonkelvin.cursomc.domain.enums.EstadoPagamento;
+
+public class PagamentoComCartao extends Pagamento{
+
+	private Integer numeroParcelas;
+	
+	public PagamentoComCartao() {
+	}
+
+	public PagamentoComCartao(Integer id, EstadoPagamento estado, Pedido pedido, Integer numeroParcelas) {
+		super(id, estado, pedido);
+		this.numeroParcelas = numeroParcelas;
+	}
+	
+	
+}
